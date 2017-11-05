@@ -1,0 +1,10 @@
+{
+    "extends": "standard",
+    "plugins": [
+      "html"
+    ],
+    "rules": {
+    	"no-debugger": "off"
+    }
+
+}

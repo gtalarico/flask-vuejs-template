@@ -1,0 +1,26 @@
+// Bulma Initial Variables
+@import "./node_modules/bulma/sass/utilities/initial-variables"
+
+$family-sans-serif: "Avenir", Helvetica, Arial, sans-serif
+$family-primary: $family-sans-serif
+
+
+$background: #EEE
+$nav-background: #F5F5F5
+$link: $grey-dark
+$text: lighten($grey-dark, 30)
+$primary: #F2B53C
+$info: #4e87b4
+
+$body-background-color: $background
+
+// Note: Variable overwritten after This will be ignored
+@import "~bulma/bulma.sass"
+
+// Animations
+.fade-enter-active, .fade-leave-active
+  transition: opacity 0.75s
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
