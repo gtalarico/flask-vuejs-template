@@ -67,3 +67,5 @@ The production server uses Gunicorn to serve the the Flask Application
 # Heroku
 `heroku apps:create flask-vuejs-template`
 `heroku git:remote --app flask-vuejs-template`
+`heroku config:set FLASK_CONFIG=Production`
+`heroku config:set SECRET=SECRETKEY`
