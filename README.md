@@ -1,4 +1,4 @@
-# Flask-Vue Template
+# Flask-Vue-Template
 
 A project template for a Flask-Vue.js Web Application
 
@@ -9,8 +9,8 @@ I decided to put this together after spending some time trying to come up with a
 Unlike other templates I saw, this setup assumes you want to use Vue.js to manage all of your front-end resources and assets, and therefore,
 it does not attempt to overwrite Jinja's or Vue's templating delimiter.
 
-The Vue.js portion of the application is basically the official Vue.js Template "Webpack Simple" with minor tweaks (esline and friendly-errors).
-It also adds simple examples of usage of Vue-Router for routing and Vuex for state management.
+The Vue.js portion of the application is similar the official Vue.js Template "Webpack Simple" with a few minor tweaks (adds esline and friendly-errors).
+It also adds minimal examples of basic usage of Filters, Mixins, Vue-Router for routing, Vuex for state management.
 
 ### Template Structure
 
@@ -64,7 +64,6 @@ The production server uses Gunicorn to serve the the Flask Application
 * Flask
 * FlaskRestful
 
-
-
-
-
+# Heroku
+`heroku apps:create flask-vuejs-template`
+`heroku git:remote --app flask-vuejs-template`
