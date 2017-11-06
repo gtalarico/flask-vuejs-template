@@ -26,7 +26,7 @@ This allows me to serve the Flask api endpoint, while still taking advantage of 
 
 > From application root directory:
 
-` python run.py`
+`python run.py`
 
 This will server the `/api` endpoints at `localhost:5000`.
 You could also server the JS application, but this would not handle hot-reloading, js linting, etc.
