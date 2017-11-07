@@ -2,8 +2,8 @@
 
 from flask_restful import Resource, abort
 
-from genome.api import api_rest
-from genome.api.security import require_auth
+from app.api import api_rest
+from app.api.security import require_auth
 
 class BaseResource(Resource):
 

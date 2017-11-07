@@ -4,12 +4,13 @@ import os
 from flask import Flask, Blueprint, session
 from flask_restful import Api
 
-api_bp = Blueprint('api_app', __name__,
+api_bp = Blueprint('api_bp', __name__,
                    template_folder='templates',
                    url_prefix='/api')
 
 api_rest = Api(api_bp)
 
+# OPTIONAL
 @api_bp.after_request
 def add_header(response):
     # Required for vue app served from localhost to access 127.0.0.1:5000
@@ -17,6 +18,6 @@ def add_header(response):
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
     return response
 
-from genome.api import views
-from genome.api.rest import routing
+from app.api import views
+from app.api.rest import routing
 

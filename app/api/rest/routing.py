@@ -6,7 +6,7 @@ http://flask-restful.readthedocs.io/en/latest/
 
 import time
 from flask import request
-from genome.api.rest.base import BaseResource, SecureResource, rest_resource
+from app.api.rest.base import BaseResource, SecureResource, rest_resource
 
 @rest_resource
 class ResourceOne(BaseResource):
