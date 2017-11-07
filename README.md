@@ -95,7 +95,7 @@ git push heroku
 * Vuex
 * Vue Router
 * Bulma Css
-* Axious
+* Axios
 * es-lint
 * friendly-errors-webpack-plugin
 * Webpack loaders
