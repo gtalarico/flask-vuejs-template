@@ -2,6 +2,8 @@
 
 A project template for a Flask-Vue.js Web Application
 
+Note: In progress - comments and ideas are welcome.
+
 ## Motivation
 
 I have been using Flask for a while and I recently started using Vue.js
