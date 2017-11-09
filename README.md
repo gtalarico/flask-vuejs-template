@@ -50,8 +50,8 @@ This allows me to serve the Flask api endpoint, while still taking advantage of 
 
 `python run.py`
 
-This will server the `/api` endpoints at `localhost:5000`.
-You could also server the JS application, but this would not handle hot-reloading, js linting, etc.
+This will serve the `/api` endpoints at `localhost:5000`.
+You could also serve the JS application, but this would not handle hot-reloading, js linting, etc.
 
 > from app/client/app:
 
@@ -63,7 +63,7 @@ To install npm dependencies.
 
 This will serve the Vue.js frontend application on `localhost:8080`.
 
-Alternatively, you can also run just the flask serve if you build your vuejs application first:
+Alternatively, you can also run just the flask server if you build your vuejs application first:
 
 `npm run build`
 
