@@ -12,9 +12,9 @@ This template is what I ended up with after testing a few different configuratio
 
 ## Application Structure
 
-The template is basically one Flask application with with two blueprints:
+The template is basically one Flask application with two blueprints:
 
-1. Api App: Blueprint uses FlaskRestful to serve resources at the `/api` url endpoint.
+1. Api App: Blueprint uses Flask-RESTful to serve resources at the `/api` url endpoint.
 2. Client App: Minimal Blueprint used only to serve the a single-page Vue.js App  at the root endpoint `/`
 
 
@@ -32,7 +32,7 @@ The Vue.js application is also scaffolded with examples of basic usage of Filter
 #### Flask Api Structure (Api App)
 
 The second blueprint is served by the Api App Blueprint.
-This bluprint is setup using Flask Restul, but that cab be discarded for those that prefer to use standard function view and routes.
+This blueprint is setup using Flask-RESTful, but that can be discarded for those that prefer to use standard function view and routes.
 
 
 ## Installation
@@ -61,9 +61,9 @@ To install npm dependencies.
 
 `npm run dev`
 
-This will server the Vue.js frontend application on `localhost:8080`.
+This will serve the Vue.js frontend application on `localhost:8080`.
 
-Alternatively, you can also run just the flask server if you build your vuejs application first:
+Alternatively, you can also run just the flask serve if you build your vuejs application first:
 
 `npm run build`
 
