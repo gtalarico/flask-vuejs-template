@@ -102,4 +102,4 @@ git push heroku
 
 #### Api App
 * Flask
-* FlaskRestful
+* Flask-RESTful
