@@ -12,9 +12,9 @@ This template is what I ended up with after testing a few different configuratio
 
 ## Application Structure
 
-The template is basically one Flask application with with two blueprints:
+The template is basically one Flask application with two [Flask blueprints](http://flask.pocoo.org/docs/0.12/blueprints/):
 
-1. Api App: Blueprint uses FlaskRestful to serve resources at the `/api` url endpoint.
+1. Api App: Blueprint uses Flask-RESTful to serve resources at the `/api` url endpoint.
 2. Client App: Minimal Blueprint used only to serve the a single-page Vue.js App  at the root endpoint `/`
 
 
@@ -32,7 +32,7 @@ The Vue.js application is also scaffolded with examples of basic usage of Filter
 #### Flask Api Structure (Api App)
 
 The second blueprint is served by the Api App Blueprint.
-This bluprint is setup using Flask Restul, but that cab be discarded for those that prefer to use standard function view and routes.
+This blueprint is setup using Flask-RESTful, but that can be discarded for those that prefer to use standard function view and routes.
 
 
 ## Installation
@@ -50,8 +50,8 @@ This allows me to serve the Flask api endpoint, while still taking advantage of 
 
 `python run.py`
 
-This will server the `/api` endpoints at `localhost:5000`.
-You could also server the JS application, but this would not handle hot-reloading, js linting, etc.
+This will serve the `/api` endpoints at `localhost:5000`.
+You could also serve the JS application, but this would not handle hot-reloading, js linting, etc.
 
 > from app/client/app:
 
@@ -61,7 +61,7 @@ To install npm dependencies.
 
 `npm run dev`
 
-This will server the Vue.js frontend application on `localhost:8080`.
+This will serve the Vue.js frontend application on `localhost:8080`.
 
 Alternatively, you can also run just the flask server if you build your vuejs application first:
 
@@ -102,4 +102,4 @@ git push heroku
 
 #### Api App
 * Flask
-* FlaskRestful
+* Flask-RESTful
