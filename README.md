@@ -12,7 +12,7 @@ This template is what I ended up with after testing a few different configuratio
 
 ## Application Structure
 
-The template is basically one Flask application with two blueprints:
+The template is basically one Flask application with two [Flask blueprints](http://flask.pocoo.org/docs/0.12/blueprints/):
 
 1. Api App: Blueprint uses Flask-RESTful to serve resources at the `/api` url endpoint.
 2. Client App: Minimal Blueprint used only to serve the a single-page Vue.js App  at the root endpoint `/`
