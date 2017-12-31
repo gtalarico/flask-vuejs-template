@@ -10,6 +10,7 @@
       <div class="card-content">
         <div class="content">
           Content
+          <div>{{ resource }}</div>
         </div>
       </div>
     </div>
@@ -23,7 +24,6 @@ export default {
   name: 'CustomComponent',
   data () {
     return {
-
     }
   },
   watch: {
@@ -38,12 +38,13 @@ export default {
     }
   },
   computed: {
-    floors () {
-      return this.$store.state.floors
+    resource () {
+      // To display `resourceOne` value from the backend
+      return this.$store.state.resource
     }
   },
   mounted () {
-
+    this.$store.dispatch('fetchResourceOne')
   }
 }
 </script>
