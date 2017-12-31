@@ -9,8 +9,8 @@ export default {
     })
   },
 
-  fetchResourceTwo: function  (context, resouceId) {
-  	backend.fetchResourceTwo(resouceId).then((responseData) => {
+  fetchResourceTwo: function  (context, resourceId) {
+  	backend.fetchResourceTwo(resourceId).then((responseData) => {
   		context.commit('setResource', responseData)
   	})
   }

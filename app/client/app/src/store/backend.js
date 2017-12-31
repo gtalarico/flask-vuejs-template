@@ -16,12 +16,12 @@ $backend.interceptors.response.use(function (response) {
 
 export default {
 
-  fetchResourceOne (callback) {
+  fetchResourceOne () {
     return $backend.get(`resource/one`)
       .then(response => response.data)
   },
 
-  fetchResourceTwo (resourceId, callback) {
+  fetchResourceTwo (resourceId) {
   	return $backend.get(`resource/two/${resourceId}`)
   		.then(response => response.data);
   }
