@@ -3,14 +3,14 @@ import backend from './backend'
 
 export default {
 
-  fetchResouceOne: function  (context) {
-    backend.fetchResouceOne(function(responseData) {
+  fetchResourceOne: function  (context) {
+    backend.fetchResourceOne().then((responseData) => {
       context.commit('setResource', responseData)
     })
   },
 
-  fetchResouceTwo: function  (context, resouceId) {
-  	backend.fetchResouceTwo(resouceId, function(responseData) {
+  fetchResourceTwo: function  (context, resouceId) {
+  	backend.fetchResourceTwo(resouceId).then((responseData) => {
   		context.commit('setResource', responseData)
   	})
   }
