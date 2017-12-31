@@ -22,7 +22,7 @@ export default {
   },
 
   fetchResourceTwo (resourceId) {
-  	return $backend.get(`resource/two/${resourceId}`)
-  		.then(response => response.data);
+    return $backend.get(`resource/two/${resourceId}`)
+      .then(response => response.data)
   }
 }
