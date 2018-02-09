@@ -1,4 +1,4 @@
-""" Genome API Backend - Base Resource Models """
+""" API Backend - Base Resource Models """
 
 from flask_restful import Resource, abort
 

@@ -1,7 +1,3 @@
-# genome
-
-> Genome Vue Js
-
 ## Build Setup
 
 ``` bash

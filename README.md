@@ -11,7 +11,8 @@ I wanted to continue using Python as a Backend while migrating all frontend logi
 
 ## Application Structure
 
-The template is basically a Flask application with with two blueprints:
+
+The template is a Flask application with with two blueprints:
 
 1. Api App: Blueprint uses FlaskRestful to serve resources at the `/api` url endpoint.
 2. Client App: Minimal Blueprint used only to serve a single-page Vue.js App at the root endpoint `/`
@@ -56,7 +57,7 @@ From `app/client/app`:
 
 `npm run build`
 
-Then from the application root directory:
+3. Then from the application root directory:
 
 `python run.py`
 
@@ -104,4 +105,4 @@ git push heroku
 
 #### Api App
 * Flask
-* FlaskRestful
+* Flask-RESTful
