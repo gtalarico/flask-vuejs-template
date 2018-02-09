@@ -2,37 +2,37 @@
 
 A project template for a Flask-Vue.js Web Application
 
-Note: In progress - comments and ideas are welcome.
+Note: PRs, comments and suggestions are welcome.
 
 ## Motivation
 
-I have been using Flask for a while and I recently started using Vue.js
-I want to continue using Python as a Backend, but wanted migrate all frontend to a JS framework.
-This template is what I ended up with after testing a few different configurations Flask-Vue integrated Application.
+I have been using Flask for a while and I recently started using Vue.js.
+I wanted to continue using Python as a Backend while migrating all frontend logic to VueJs.
 
 ## Application Structure
 
-The template is basically one Flask application with with two blueprints:
+The template is basically a Flask application with with two blueprints:
 
 1. Api App: Blueprint uses FlaskRestful to serve resources at the `/api` url endpoint.
-2. Client App: Minimal Blueprint used only to serve the a single-page Vue.js App  at the root endpoint `/`
+2. Client App: Minimal Blueprint used only to serve a single-page Vue.js App at the root endpoint `/`
 
 
 #### Vue.js Structure (Client App)
 
 The Vue.js application is served by the Client App Blueprint.
 
-This template assumes you want to use Vue.js to manage all of your front-end resources and assets, and therefore,
-it does not attempt to overwrite Jinja's or Vue's templating delimiter, not does it use flask-assets.
+This template assumes you want to use VueJs to manage all of your front-end resources and assets,
+so it does not attempt to overwrite Jinja's or Vue's template delimiter.
 
-The Vue.js portion of the application is built on top of the official Vue.js Template "Webpack Simple" with a few minor tweaks (adds esline and friendly-errors).
+The Vue portion of the application is built on top of the official Vue template "Webpack Simple" with a few minor tweaks -
+adds [eslinter](https://www.npmjs.com/package/eslinter) and [friendly-errors](https://www.npmjs.com/package/friendly-errors-webpack-plugin).
 
-The Vue.js application is also scaffolded with examples of basic usage of Filters, Mixins, Vue-Router for routing, Vuex for state management.
+The Vue application is also scaffolded with Filters, Mixins, Vue-Router, Vuex for state management.
 
 #### Flask Api Structure (Api App)
 
-The second blueprint is served by the Api App Blueprint.
-This bluprint is setup using Flask Restul, but that cab be discarded for those that prefer to use standard function view and routes.
+The second blueprint is served by the Api Blueprint.
+This blueprint is setup using Flask Restul, but that can easily discarded if you prefer to use standard view functions and routes.
 
 
 ## Installation
@@ -43,33 +43,35 @@ This bluprint is setup using Flask Restul, but that cab be discarded for those t
 
 ### Running Application (Local Development server)
 
-> Note: For local development, I run both the Flask Development Server in parallel to webpack-dev-server.
-This allows me to serve the Flask api endpoint, while still taking advantage of the hot-reload and eslint.
+> For local development, I run both the Flask Development Server in parallel to webpack-dev-server.
+This allows me to serve the Flask api endpoint while still taking advantage of the hot-reload and eslinter.
 
-> From application root directory:
+From `app/client/app`:
 
-`python run.py`
-
-This will server the `/api` endpoints at `localhost:5000`.
-You could also server the JS application, but this would not handle hot-reloading, js linting, etc.
-
-> from app/client/app:
+1. Install npm dependencies.
 
 `npm install`
 
-To install npm dependencies.
+2. Build the VueJs Application:
+
+`npm run build`
+
+Then from the application root directory:
+
+`python run.py`
+
+This will server the `/api` endpoint _and_ the built Vue application at `localhost:5000`
+The disadvantage of this method is that it does not offer hot-reloading, js linting, etc.
+
+To take advantage of these features, keep the flask server running on `localhost:5000`, and then start the webpack dev server from another shell.
+
+From `app/client/app`:
 
 `npm run dev`
 
 This will server the Vue.js frontend application on `localhost:8080`.
 
-Alternatively, you can also run just the flask server if you build your vuejs application first:
-
-`npm run build`
-
-This will pack the full application and save it in 'app/dist' where it can be served by the Flask Server.
-The disadvantage of this method is that you have to wait for a full build after every change
-
+Use this url during develoment to take advantage of hot-reloading and linting.
 
 ### Production Server
 
