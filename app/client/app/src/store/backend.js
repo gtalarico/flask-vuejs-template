@@ -1,13 +1,13 @@
 import axios from 'axios'
 
 
-let $backend = axios.create({
+let $axios = axios.create({
     baseURL: 'http://127.0.0.1:5000/api/',
     timeout: 5000,
     headers: {'Content-Type': 'application/json'}
 })
 
-$backend.interceptors.response.use(function (response) {
+$axios.interceptors.response.use(function (response) {
     return response
   }, function (error) {
     console.log(error)
@@ -17,12 +17,12 @@ $backend.interceptors.response.use(function (response) {
 export default {
 
   fetchResourceOne () {
-    return $backend.get(`resource/one`)
+    return $axios.get(`resource/one`)
       .then(response => response.data)
   },
 
   fetchResourceTwo (resourceId) {
-    return $backend.get(`resource/two/${resourceId}`)
+    return $axios.get(`resource/two/${resourceId}`)
       .then(response => response.data)
   }
 }
