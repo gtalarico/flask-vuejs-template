@@ -2,18 +2,19 @@
   <section>
 
     <div class="container">
-      <custom-component :data="'DataFromParent'"/>
+      <p v-if="isLoading">Loading...</p>
+      <panel-component v-else :propsData="'Page One'"/>
     </div>
 
   </section>
 </template>
 <script>
-import CustomComponent from '../components/CustomComponent'
+import aPanel from '../components/aPanel'
 
 export default {
   name: 'Property',
   components: {
-    'custom-component': CustomComponent
+    'panel-component': aPanel
   },
   data () {
     return {
@@ -22,8 +23,11 @@ export default {
   },
   computed: {
     isLoading () {
-      return this.$store.state.isLoading
+      return this.$store.state.resources < 2
     }
+  },
+  mounted () {
+    this.$store.dispatch('fetchResourceOne')
   }
 }
 </script>

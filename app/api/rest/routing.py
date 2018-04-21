@@ -16,6 +16,7 @@ class ResourceOne(BaseResource):
     """ Sample Resource Class """
 
     def get(self, resource_id):
+        time.sleep(1)
         return {'resource_id': resource_id}
 
     def post(self, resource_id):

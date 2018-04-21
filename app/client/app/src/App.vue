@@ -22,12 +22,7 @@
 <script>
 
 export default {
-  name: '',
-  computed: {
-    isLoading () {
-      return this.$store.state.isLoading
-    }
-  }
+  name: 'App'
 }
 </script>
 

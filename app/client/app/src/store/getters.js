@@ -1,9 +1,9 @@
 export default {
 
   getterOne: (state) => {
-    return state.resourceOne
+    return state.resources[0]
   },
-  getterWithArg: (state) => (value) => {
-    return state.resourceOne + value
+  getterWithArg: (state) => (index) => {
+    return state.resources[value]
   }
 }

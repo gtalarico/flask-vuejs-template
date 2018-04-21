@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import createLogger from 'vuex/dist/logger'
 
-
 import actions from './actions'
 import getters from './getters'
 import mutations from './mutations'
@@ -17,7 +16,6 @@ export default new Vuex.Store({
   actions,
   getters,
   state: {
-    resource: null,
-    isLoading: false
+    resources: []
   }
 })

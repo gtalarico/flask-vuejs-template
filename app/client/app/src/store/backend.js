@@ -1,18 +1,20 @@
 import axios from 'axios'
 
+const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+const API_URL = IS_PRODUCTION ? '/api/' : 'http://localhost:5000/api/'
 
 let $axios = axios.create({
-    baseURL: 'http://127.0.0.1:5000/api/',
-    timeout: 5000,
-    headers: {'Content-Type': 'application/json'}
+  baseURL: API_URL,
+  timeout: 5000,
+  headers: {'Content-Type': 'application/json'}
 })
 
 $axios.interceptors.response.use(function (response) {
-    return response
-  }, function (error) {
-    console.log(error)
-    return Promise.reject(error)
-  });
+  return response
+}, function (error) {
+  console.log(error)
+  return Promise.reject(error)
+})
 
 export default {
 
@@ -22,7 +24,8 @@ export default {
   },
 
   fetchResourceTwo (resourceId) {
-    return $axios.get(`resource/two/${resourceId}`)
+    return $axios.get(`secure-resource/${resourceId}`,
+      {'headers': {'authorization': 'token'}})
       .then(response => response.data)
   }
 }

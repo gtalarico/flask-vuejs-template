@@ -5,7 +5,7 @@
         <img src="../assets/img/logo.png">
       </a>
       <a class="navbar-item" href="#">
-        Flask-Vue
+        FLASK-VUE-TEMPLATE
       </a>
     </div>
     <div class="navbar-menu">
@@ -21,7 +21,7 @@ export default {
   name: 'Navbar',
   data () {
     return {
-      version: this.$store.state.version
+      version: '0.1.0'
     }
   }
 }
