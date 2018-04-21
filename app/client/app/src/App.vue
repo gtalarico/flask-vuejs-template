@@ -1,6 +1,5 @@
 <template>
 <div>
-
     <nav>
         <router-view name="navbar"></router-view>
         <router-view name="subnavbar"></router-view>

@@ -11,6 +11,7 @@ class Config(object):
 
 class Development(Config):
     DEBUG = True
+    PRODUCTION = False
     SECRET_KEY = 'SuperSecretKey'
 
 
