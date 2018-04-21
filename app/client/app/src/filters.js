@@ -6,12 +6,12 @@ import Vue from 'vue'
 let filters = {
 
   formatNumber (value) {
-  	let val = (value / 1)
-		return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-	}
+    let val = (value / 1)
+    return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  }
 }
 
-// Register Filters
+// Register All Filters
 Object.keys(filters).forEach(function (filterName) {
   Vue.filter(filterName, filters[filterName])
 })

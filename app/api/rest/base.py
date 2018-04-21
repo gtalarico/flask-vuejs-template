@@ -1,9 +1,9 @@
 """ API Backend - Base Resource Models """
 
-from flask_restful import Resource, abort
+from flask_restplus import Resource, abort
 
-from app.api import api_rest
 from app.api.security import require_auth
+
 
 class BaseResource(Resource):
 
@@ -24,7 +24,3 @@ class BaseResource(Resource):
 
 class SecureResource(BaseResource):
     method_decorators = [require_auth]
-
-def rest_resource(resource_cls):
-    """ Decorator for adding resources to Api App """
-    api_rest.add_resource(resource_cls, *resource_cls.endpoints)

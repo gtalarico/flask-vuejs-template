@@ -1,33 +1,31 @@
 """
 REST API Resource Routing
-
-http://flask-restful.readthedocs.io/en/latest/
+http://flask-restplus.readthedocs.io
 """
 
 import time
 from flask import request
-from app.api.rest.base import BaseResource, SecureResource, rest_resource
+from flask_restplus import Api
 
-@rest_resource
+from app.api.rest.base import BaseResource, SecureResource
+from app.api import api_rest
+
+
+@api_rest.route('/resource/<string:resource_id>')
 class ResourceOne(BaseResource):
-    """ /api/resource/one """
-    endpoints = ['/resource/one']
-
-    def get(self):
-        time.sleep(1)
-        return {'name': 'Resource One', 'data': True}
-
-    def post(self):
-        json_payload = request.json
-        return {'name': 'Resource Post'}
-
-
-@rest_resource
-class SecureResourceOne(SecureResource):
-    """ /api/resource/two """
-    endpoints = ['/resource/two/<string:resource_id>']
+    """ Sample Resource Class """
 
     def get(self, resource_id):
         time.sleep(1)
-        return {'name': 'Resource Two', 'data': resource_id}
+        return {'resource_id': resource_id}
 
+    def post(self, resource_id):
+        json_payload = request.json
+        return {'resource': json_payload}, 201
+
+
+@api_rest.route('/secure-resource/<string:resource_id>')
+class SecureResourceOne(SecureResource):
+
+    def get(self, resource_id):
+        return {'resource_id': resource_id}
