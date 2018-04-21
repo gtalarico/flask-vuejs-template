@@ -87,6 +87,11 @@ heroku config:set SECRET=SECRETKEY
 git push heroku
 ```
 
+### Heroku deployment - Easy
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/gtalarico/flask-vuejs-template)
+
+
 ## What's Included
 
 #### Client App

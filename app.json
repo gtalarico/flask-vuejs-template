@@ -1,0 +1,20 @@
+
+{
+  "name": "Flask VueJs Template",
+  "description": "",
+  "repository": "https://github.com/gtalarico/flask-vuejs-template",
+  // "logo": "https://raw.githubusercontent.com/gtalarico/ladybug-tools.github.io/master/assets/img/honeybee.png",
+  "keywords": ["flask", "vue"],
+  "env": {
+    "FLASK_CONFIG": {
+      "description": "Flask Enviroment Config",
+      "value": "Production"
+    },
+    "SECRET": {
+      "description": "Flask Secret Key",
+      "value": "YourKeyHere"
+    }
+   },
+  "addons": [
+   ]
+}
