@@ -8,4 +8,4 @@ app.register_blueprint(api_bp)
 app.register_blueprint(client_bp)
 
 from . import config
-app.logger.info('>>> {}'.format(app.config['MODE']))
+app.logger.info('>>> {}'.format(config.flask_config))
