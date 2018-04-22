@@ -2,8 +2,7 @@ language: python
 git:
   depth: 2
 python:
-  - 3.4
-  - 3.5
+  # - 3.5
   - 3.6
 branches:
   only:
@@ -13,7 +12,7 @@ script:
   - pytest --cov=app/api --cov-report=xml
 install:
   - "pip install --upgrade pip"
-  - "pip install -e . --upgrade --upgrade-strategy=only-if-needed"
+  - "pip install pipenv"
   - "pipenv install --dev"
   - "pip install codecov"
 after_success:
