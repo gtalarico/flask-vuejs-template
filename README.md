@@ -5,18 +5,21 @@ _An all batteries included template for a Flask + Vue.js Web Application_
 
 ## Features
 * Minimal Flask App with modular Config
-* [Flask-RestPlus](http://flask-restplus.readthedocs.io) Api with class-based secure resourceful routing
+* [Flask-RestPlus](http://flask-restplus.readthedocs.io) API with class-based secure resource routing
 * Starter [PyTest](http://pytest.org) test suite
-* [Vue Cli 3 Template](https://github.com/vuejs-templates/webpack) with Babel, ESlint, and SASS loader.
+* [vue-cli] 3 template (https://github.com/vuejs/vue-cli/blob/dev/docs/README.md) with Babel and ESlint.
 * [Vuex](https://vuex.vuejs.org/) for state management
 * [Vue Router](https://router.vuejs.org/)
 * [Axios](https://vuex.vuejs.org/) for backend communication
-* Sample Vue Filters [Filters](https://vuejs.org/v2/guide/filters.html)
+* Sample Vue [Filters](https://vuejs.org/v2/guide/filters.html)
 * Heroku Configuration with one-click deployment
 
 ## Template Structure
 
-The template uses Flask + Flask RestPlus as a minimal REST Api and leaves the all front end work with Vue + Webpack.
+The template uses Flask & Flask-RestPlus to create a REST style API,
+and let's VueJs + vue-cli handle the front end and asset pipline.
+
+### Blueprints
 
 The Flask application is setup with with two blueprints:
 
@@ -24,7 +27,7 @@ The Flask application is setup with with two blueprints:
 #### Api Blueprint
 
 Uses FlaskRestful to serve restful resources at the `/api` url endpoint.
-This blueprint users Flask RestPlus but it can be discarded if you prefer standard view functions routing.
+Flask-RestPlus can be discarded if you prefer standard view functions routing.
 
 #### Client Blueprint
 
@@ -45,70 +48,84 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 * Make sure node + npm are installed (tested with npm v5.6)
 * Python 3 is installed
 
-##### Setup Template and dependencies 
+##### Template and Dependencies 
 
-* Clone this repository
-	`$ git clone https://github.com/gtalarico/flask-vuejs-template.git`
+* Clone this repository:
+	
+	```
+	$ git clone https://github.com/gtalarico/flask-vuejs-template.git
+	```
 
 * Create a [virtual enviroment](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies) (highly recommended) 
-* Install Python dependencies using pip or pipenv
+
+* Install Python dependencies using pip or pipenv from the project directory:
 
 	`$ pipenv install` or `pip install -r requirements.txt`
 
 * Install npm dependencies
 	
-	`$ cd app/client/vue_App`
-
-	`$ npm install`
-
-
-### Development Server
+	```
+	$ cd app/client/vue_app
+	$ npm install
+	```
 
 
-From `app/client/vue_app`:
+## Development Server
 
-1. Build the VueJs Application:
+While it's possibl to use Flask to serve the vue app and the rest api, it would be less then ideal as each change in your client code would required a full rebuild. Instead, we will use flask the serve the api endpoints, but we will serve the client app using the vue-cli dev server. 
 
-	`$ npm run build`
+This will allows us to take advantage of Hot Module reload and ESlint. This is a small price to pay for the amount of time saved by Hot Module Reload alone!
 
-2. From the application root directory:
+##### Api Server
 
-	`$ python run.py`
+From the root directory run:
 
-This will server the `/api` endpoint _and_ the built Vue application at `localhost:5000`
+```
+$ python run.py
+```
 
-The disadvantage of this method is that it does not offer hot-reloading, js linting, etc.
+This will start the flask development server on `localhost:5000` and will respond to all requests on `/api.`.
 
-#### Development Server With HMD
+##### Client Server
 
-There some advantages of running both the Flask Development Server in parallel to webpack-dev-server. It allows you to serve the Flask api endpoint while still taking advantage of the hot-reload and eslinter provided by webpack.
+Start another terminal window, and from the directory run:
 
-To take advantage of these features, keep the flask server running on `localhost:5000`, and then start the webpack dev server from another shell.
+```
+$ python run_client.py
+``` 
 
-From the root directory run `$ python run_client.py` 
+This will launch your browser and server the Vue application on `localhost:8080`. The vue app will hit `localhost:5000` to fetch resources.
 
-(Or from `app/client/vue_app` run `$ npm run serve`)
+This combination allows you have both your backend python files, as well as the Vue app files auto-reload on save. 
 
-This will server the Vue.js frontend application on `localhost:8080`.
 
-Use `localhost:8080` during develoment to take advantage of hot-reloading and linting.
+## Production Server
 
-### Production Server
-
-The production server uses Gunicorn to serve the entire application.
+The production server will use Gunicorn to serve the entire application.
 This template is configured to work with Heroku out of the box - just make sure you run `npm run build` before pushing it to your Heroku repository.
 
-
-### Heroku deployment
+* from `/app/client/vue_app` run:
 
 ```
-$ heroku apps:create flask-vuejs-template
-$ heroku git:remote --app flask-vuejs-template
-$ heroku config:set FLASK_CONFIG=Production
-$ heroku config:set SECRET=SECRETKEY
-$ git push heroku
+$ npm run build
 ```
+
+* Commit your code 
+
+* Setup your heroku app:
+ 
+	```
+	$ heroku apps:create flask-vuejs-template
+	$ heroku config:set FLASK_CONFIG=Production
+	$ heroku config:set SECRET=SECRETKEY
+	$ heroku git:remote --app flask-vuejs-template
+	```
+* Push your application to heroku:
+
+	```$ git push heroku```
 
 ### Heroku deployment - One Click Deploy
+
+You can spin up your on version of this template on Heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/gtalarico/flask-vuejs-template)
