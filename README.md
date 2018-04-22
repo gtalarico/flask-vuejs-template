@@ -7,6 +7,8 @@ _Flask + Vue.js Web Application Template_
 
 ![Vue Logo](/docs/vue-logo.png "Vue Logo") ![Flask Logo](/docs/flask-logo.png "Flask Logo")
 
+[Live Demo](https://flask-vuejs-template.herokuapp.com/)
+
 ## Features
 * Minimal Flask App with modular Config
 * [Flask-RestPlus](http://flask-restplus.readthedocs.io) API with class-based secure resource routing
@@ -133,8 +135,3 @@ $ npm run build
 You can spin up your on version of this template on Heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/gtalarico/flask-vuejs-template)
-
-#### Demo
-
-You can see this template deployed here:
-https://flask-vuejs-template.herokuapp.com/
