@@ -90,20 +90,21 @@ This will start the flask development server on `localhost:5000` and will respon
 
 ##### Client Server
 
-Start another terminal window, and from the directory run:
+Start another terminal window, and from the same directory run:
 
 ```
 $ python run_client.py
 ```
 
-This will launch your browser and server the Vue application on `localhost:8080`. The vue app will hit `localhost:5000` to fetch resources.
+This will launch your browser and server the Vue application on `localhost:8080`. T
+he vue app will hit `localhost:5000` to fetch resources.
 
-This combination allows you have both your backend python files, as well as the Vue app files auto-reload on save.
+This combination allows you have both your backend python files, as well as the Vue app files autoreload on each file save.
 
 
 ## Production Server
 
-The production server will use Gunicorn to serve the entire application.
+The production server uses Gunicorn to serve the entire application.
 This template is configured to work with Heroku out of the box - just make sure you run `npm run build` before pushing it to your Heroku repository.
 
 * from `/app/client/vue_app` run:
