@@ -1,0 +1,19 @@
+language: python
+git:
+  depth: 2
+python:
+  - 3.4
+  - 3.5
+  - 3.6
+branches:
+  only:
+  - master
+  - dev/main
+script:
+  - pytest --cov=airtable --cov-report=xml
+install:
+  - pipenv install
+  - pipenv install --dev
+  - pip install codecov
+after_success:
+    - codecov
