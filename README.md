@@ -1,13 +1,19 @@
 # Flask-VueJs-Template
 
-_An all batteries included template for a Flask + Vue.js Web Application_
+[![Build Status](https://travis-ci.org/gtalarico/flask-vuejs-template.svg?branch=master)](https://travis-ci.org/gtalarico/flask-vuejs-template) 
+[![codecov](https://codecov.io/gh/gtalarico/flask-vuejs-template/branch/master/graph/badge.svg)](https://codecov.io/gh/gtalarico/flask-vuejs-template)
 
+_Flask + Vue.js Web Application Template_
+
+![Vue Logo](/docs/vue-logo.png "Vue Logo") ![Flask Logo](/docs/flask-logo.png "Flask Logo")
+
+[Live Demo](https://flask-vuejs-template.herokuapp.com/#/api)
 
 ## Features
 * Minimal Flask App with modular Config
 * [Flask-RestPlus](http://flask-restplus.readthedocs.io) API with class-based secure resource routing
 * Starter [PyTest](http://pytest.org) test suite
-* [vue-cli] 3 template (https://github.com/vuejs/vue-cli/blob/dev/docs/README.md) with Babel and ESlint.
+* [vue-cli 3](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md) with Babel and ESlint.
 * [Vuex](https://vuex.vuejs.org/) for state management
 * [Vue Router](https://router.vuejs.org/)
 * [Axios](https://vuex.vuejs.org/) for backend communication
@@ -44,26 +50,26 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 ## Installation
 
 ##### Before you start
- 
-* Make sure node + npm are installed (tested with npm v5.6)
-* Python 3 is installed
 
-##### Template and Dependencies 
+* Make sure node + npm are installed (tested with npm v5.6)
+* Python 3 is installed (tested with 3.6)
+
+##### Template and Dependencies
 
 * Clone this repository:
-	
+
 	```
 	$ git clone https://github.com/gtalarico/flask-vuejs-template.git
 	```
 
-* Create a [virtual enviroment](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies) (highly recommended) 
+* Create a [virtual enviroment](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies) (highly recommended)
 
 * Install Python dependencies using pip or pipenv from the project directory:
 
 	`$ pipenv install` or `pip install -r requirements.txt`
 
 * Install npm dependencies
-	
+
 	```
 	$ cd app/client/vue_app
 	$ npm install
@@ -72,9 +78,9 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 
 ## Development Server
 
-While it's possibl to use Flask to serve the vue app and the rest api, it would be less then ideal as each change in your client code would required a full rebuild. Instead, we will use flask the serve the api endpoints, but we will serve the client app using the vue-cli dev server. 
+While it's possible to use Flask to serve the vue app and the rest api, it is less than ideal as each change in client code would required a full rebuild and reload. Instead, we will use flask the serve the api endpoints, but we will serve the client app using the vue-cli dev server.
 
-This will allows us to take advantage of Hot Module reload and ESlint. This is a small price to pay for the amount of time saved by Hot Module Reload alone!
+This enables us to take advantage of Hot Module reload and ESlint. I think it is a small price to pay for the amount of time saved by Hot Module Reload alone.
 
 ##### Api Server
 
@@ -92,11 +98,11 @@ Start another terminal window, and from the directory run:
 
 ```
 $ python run_client.py
-``` 
+```
 
 This will launch your browser and server the Vue application on `localhost:8080`. The vue app will hit `localhost:5000` to fetch resources.
 
-This combination allows you have both your backend python files, as well as the Vue app files auto-reload on save. 
+This combination allows you have both your backend python files, as well as the Vue app files auto-reload on save.
 
 
 ## Production Server
@@ -110,10 +116,10 @@ This template is configured to work with Heroku out of the box - just make sure 
 $ npm run build
 ```
 
-* Commit your code 
+* Commit your code
 
 * Setup your heroku app:
- 
+
 	```
 	$ heroku apps:create flask-vuejs-template
 	$ heroku config:set FLASK_CONFIG=Production
