@@ -32,20 +32,16 @@ The Flask application is setup with with two blueprints:
 
 #### Api Blueprint
 
-Uses FlaskRestful to serve restful resources at the `/api` url endpoint.
+Uses Flask-RestPlus to serve resources at the `/api` endpoint.
 Flask-RestPlus can be discarded if you prefer standard view functions routing.
 
 #### Client Blueprint
 
-Simple flask view is used to serve the entry point to the Vue application at the root endpoint `/`
+A simple Flask view is used to serve the entry point into the Vue application at the root endpoint `/`
+The template uses vue-cli 3 and assumes Vue.js & Webpack will manage front-end resources and assets,
+so it does overwrite template delimiter.
 
-This template assumes Vue.js and Webpack will manage front-end resources and assets so it does overwrite template delimiter.
-
-The Vue application uses the official Vue Webpack template.
-
-The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; each of these can easilly removed if they are not needed.
-
-
+The Vue instance is preconfigured with Filters, Vue-Router, Vuex; each of these can easilly removed if they are not desired.
 
 ## Installation
 
