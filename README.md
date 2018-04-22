@@ -7,11 +7,11 @@ _An all batteries included template for a Flask + Vue.js Web Application_
 * Minimal Flask App with modular Config
 * [Flask-RestPlus](http://flask-restplus.readthedocs.io) Api with class-based secure resourceful routing
 * Starter [PyTest](http://pytest.org) test suite
-* [Vue Cli Webpack Template](https://github.com/vuejs-templates/webpack) with Babel and ESlint.
+* [Vue Cli 3 Template](https://github.com/vuejs-templates/webpack) with Babel, ESlint, and SASS loader.
 * [Vuex](https://vuex.vuejs.org/) for state management
 * [Vue Router](https://router.vuejs.org/)
 * [Axios](https://vuex.vuejs.org/) for backend communication
-* Sample Vue [Filters](https://vuejs.org/v2/guide/filters.html) and [Mixins](https://vuejs.org/v2/guide/mixins.html)
+* Sample Vue Filters [Filters](https://vuejs.org/v2/guide/filters.html)
 * Heroku Configuration with one-click deployment
 
 ## Template Structure
@@ -57,7 +57,7 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 
 * Install npm dependencies
 	
-	`$ cd app/client/app`
+	`$ cd app/client/vue_App`
 
 	`$ npm install`
 
@@ -65,7 +65,7 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 ### Development Server
 
 
-From `app/client/app`:
+From `app/client/vue_app`:
 
 1. Build the VueJs Application:
 
@@ -85,9 +85,9 @@ There some advantages of running both the Flask Development Server in parallel t
 
 To take advantage of these features, keep the flask server running on `localhost:5000`, and then start the webpack dev server from another shell.
 
-From `app/client/app`:
+From `app/client/vue_app`:
 
-`npm run dev`
+`npm run serve`
 
 This will server the Vue.js frontend application on `localhost:8080`.
 
