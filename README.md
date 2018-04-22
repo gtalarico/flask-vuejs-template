@@ -2,6 +2,7 @@
 
 _An all batteries included template for a Flask + Vue.js Web Application_
 
+![Vue Logo](/docs/vue-logo.jpeg "Vue Logo") ![Python Logo](/docs/python-logo.png "Python Logo")
 
 ## Features
 * Minimal Flask App with modular Config
