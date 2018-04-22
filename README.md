@@ -85,9 +85,9 @@ There some advantages of running both the Flask Development Server in parallel t
 
 To take advantage of these features, keep the flask server running on `localhost:5000`, and then start the webpack dev server from another shell.
 
-From `app/client/vue_app`:
+From the root directory run `$ python run_client.py` 
 
-`npm run serve`
+(Or from `app/client/vue_app` run `$ npm run serve`)
 
 This will server the Vue.js frontend application on `localhost:8080`.
 
