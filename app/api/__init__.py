@@ -18,5 +18,4 @@ def add_header(response):
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
     return response
 
-from app.api import views
-from app.api.rest import routing
+from app.api.rest import resources
