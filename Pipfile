@@ -11,6 +11,7 @@ flask-restplus = "*"
 
 [dev-packages]
 pytest = "*"
+bumpversion = "*"
 
 [requires]
 python_version = "3.6"
