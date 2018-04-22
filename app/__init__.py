@@ -1,4 +1,7 @@
+import os
 from flask import Flask
+import click
+
 
 from app.api import api_rest, api_bp
 from app.client import client_bp

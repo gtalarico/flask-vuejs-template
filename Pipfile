@@ -11,6 +11,8 @@ flask-restplus = "*"
 
 [dev-packages]
 pytest = "*"
+bumpversion = "*"
+pytest-sugar = "*"
 
 [requires]
 python_version = "3.6"

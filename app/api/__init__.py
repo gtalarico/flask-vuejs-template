@@ -10,13 +10,12 @@ api_bp = Blueprint('api_bp', __name__,
 
 api_rest = Api(api_bp)
 
-# OPTIONAL
 @api_bp.after_request
 def add_header(response):
-    # Required for vue app served from localhost to access 127.0.0.1:5000
+    # Required for Webpack dev served page to make api requests to flask
+    # This is for development only
     response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
     return response
 
-from app.api import views
-from app.api.rest import routing
+from app.api.rest import resources
