@@ -1,7 +1,6 @@
 import os
 import subprocess
 
-here = os.path.dirname(__file__)
-client_app_dir = os.path.join(here, 'app', 'client', 'app')
+from app.config import Config
 
-subprocess.call('npm run dev', shell=True, cwd=client_app_dir)
+subprocess.call('npm run serve', shell=True, cwd=Config.CLIENT_DIR)
