@@ -1,6 +1,6 @@
 # Flask-VueJs-Template
 
-[![Build Status](https://travis-ci.org/gtalarico/flask-vuejs-template.svg?branch=master)](https://travis-ci.org/gtalarico/flask-vuejs-template) 
+[![Build Status](https://travis-ci.org/gtalarico/flask-vuejs-template.svg?branch=master)](https://travis-ci.org/gtalarico/flask-vuejs-template)
 [![codecov](https://codecov.io/gh/gtalarico/flask-vuejs-template/branch/master/graph/badge.svg)](https://codecov.io/gh/gtalarico/flask-vuejs-template)
 
 _Flask + Vue.js Web Application Template_
@@ -79,30 +79,34 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 ## Development Server
 
 While it's possible to use Flask to serve the vue app and the rest api, it is less than ideal as each change in client code would required a full rebuild and reload. Instead, we will use flask the serve the api endpoints, but we will serve the client app using the vue-cli dev server.
+This combination allows you have both your backend python files and the Vue appplication files auto-reload on save.
 
-This enables us to take advantage of Hot Module reload and ESlint. I think it is a small price to pay for the amount of time saved by Hot Module Reload alone.
+This template also includes a few functions to help us manage the 2 servers.
+
 
 ##### Api Server
 
 From the root directory run:
 
 ```
-$ python run.py
+$ python app run api
 ```
 
 This will start the flask development server on `localhost:5000` and will respond to all requests on `/api.`.
+This command is the same as running `python run.py`
 
 ##### Client Server
 
 Start another terminal window, and from the directory run:
 
 ```
-$ python run_client.py
+$ python app run client
 ```
 
-This will launch your browser and server the Vue application on `localhost:8080`. The vue app will hit `localhost:5000` to fetch resources.
+This will launch your browser and server the Vue application on `localhost:8080`.
+The vue app will hit `localhost:5000` to fetch resources.
 
-This combination allows you have both your backend python files, as well as the Vue app files auto-reload on save.
+This command is a shorthand for changing directory to the `vue_app` directory and running `npm run serve`.
 
 
 ## Production Server
@@ -110,11 +114,11 @@ This combination allows you have both your backend python files, as well as the 
 The production server will use Gunicorn to serve the entire application.
 This template is configured to work with Heroku out of the box - just make sure you run `npm run build` before pushing it to your Heroku repository.
 
-* from `/app/client/vue_app` run:
-
+* Build your Vue Application:
 ```
-$ npm run build
+$ python app build
 ```
+This commands is a shorcut for cd-ing into `/app/client/vue_app` and running `$ npm run build`.
 
 * Commit your code
 
