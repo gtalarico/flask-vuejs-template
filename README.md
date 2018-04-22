@@ -78,9 +78,9 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 
 ## Development Server
 
-While it's possibl to use Flask to serve the vue app and the rest api, it would be less then ideal as each change in your client code would required a full rebuild. Instead, we will use flask the serve the api endpoints, but we will serve the client app using the vue-cli dev server.
+While it's possible to use Flask to serve the vue app and the rest api, it is less than ideal as each change in client code would required a full rebuild and reload. Instead, we will use flask the serve the api endpoints, but we will serve the client app using the vue-cli dev server.
 
-This will allows us to take advantage of Hot Module reload and ESlint. This is a small price to pay for the amount of time saved by Hot Module Reload alone!
+This enables us to take advantage of Hot Module reload and ESlint. I think it is a small price to pay for the amount of time saved by Hot Module Reload alone.
 
 ##### Api Server
 
