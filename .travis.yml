@@ -10,10 +10,11 @@ branches:
   - master
   - dev/main
 script:
-  - pytest --cov=airtable --cov-report=xml
+  - pytest --cov=app/api --cov-report=xml
 install:
-  - pipenv install
-  - pipenv install --dev
-  - pip install codecov
+  - "pip install --upgrade pip"
+  - "pip install -e . --upgrade --upgrade-strategy=only-if-needed"
+  - "pipenv install --dev"
+  - "pip install codecov"
 after_success:
     - codecov
