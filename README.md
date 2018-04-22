@@ -2,7 +2,7 @@
 
 _An all batteries included template for a Flask + Vue.js Web Application_
 
-![Vue Logo](/docs/vue-logo.jpeg "Vue Logo") ![Python Logo](/docs/python-logo.png "Python Logo")
+![Vue Logo](/docs/vue-logo.png "Vue Logo") ![Python Logo](/docs/python-logo.png "Python Logo")
 
 ## Features
 * Minimal Flask App with modular Config
@@ -45,26 +45,26 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 ## Installation
 
 ##### Before you start
- 
+
 * Make sure node + npm are installed (tested with npm v5.6)
 * Python 3 is installed
 
-##### Template and Dependencies 
+##### Template and Dependencies
 
 * Clone this repository:
-	
+
 	```
 	$ git clone https://github.com/gtalarico/flask-vuejs-template.git
 	```
 
-* Create a [virtual enviroment](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies) (highly recommended) 
+* Create a [virtual enviroment](https://packaging.python.org/tutorials/managing-dependencies/#managing-dependencies) (highly recommended)
 
 * Install Python dependencies using pip or pipenv from the project directory:
 
 	`$ pipenv install` or `pip install -r requirements.txt`
 
 * Install npm dependencies
-	
+
 	```
 	$ cd app/client/vue_app
 	$ npm install
@@ -73,7 +73,7 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 
 ## Development Server
 
-While it's possibl to use Flask to serve the vue app and the rest api, it would be less then ideal as each change in your client code would required a full rebuild. Instead, we will use flask the serve the api endpoints, but we will serve the client app using the vue-cli dev server. 
+While it's possibl to use Flask to serve the vue app and the rest api, it would be less then ideal as each change in your client code would required a full rebuild. Instead, we will use flask the serve the api endpoints, but we will serve the client app using the vue-cli dev server.
 
 This will allows us to take advantage of Hot Module reload and ESlint. This is a small price to pay for the amount of time saved by Hot Module Reload alone!
 
@@ -93,11 +93,11 @@ Start another terminal window, and from the directory run:
 
 ```
 $ python run_client.py
-``` 
+```
 
 This will launch your browser and server the Vue application on `localhost:8080`. The vue app will hit `localhost:5000` to fetch resources.
 
-This combination allows you have both your backend python files, as well as the Vue app files auto-reload on save. 
+This combination allows you have both your backend python files, as well as the Vue app files auto-reload on save.
 
 
 ## Production Server
@@ -111,10 +111,10 @@ This template is configured to work with Heroku out of the box - just make sure 
 $ npm run build
 ```
 
-* Commit your code 
+* Commit your code
 
 * Setup your heroku app:
- 
+
 	```
 	$ heroku apps:create flask-vuejs-template
 	$ heroku config:set FLASK_CONFIG=Production
