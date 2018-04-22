@@ -7,7 +7,7 @@ _Flask + Vue.js Web Application Template_
 
 ![Vue Logo](/docs/vue-logo.png "Vue Logo") ![Flask Logo](/docs/flask-logo.png "Flask Logo")
 
-[Live Demo](https://flask-vuejs-template.herokuapp.com/)
+[Live Demo](https://flask-vuejs-template.herokuapp.com/#/api)
 
 ## Features
 * Minimal Flask App with modular Config
