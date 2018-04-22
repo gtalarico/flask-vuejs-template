@@ -1,31 +1,29 @@
 <template>
-<div>
-    <nav>
-        <router-view name="navbar"></router-view>
-        <router-view name="subnavbar"></router-view>
-    </nav>
-
-    <section class="section">
-      <transition name="fade">
-        <div class="container">
-
-          <router-view name="main"></router-view>
-
-        </div>
-      </transition>
-    </section>
-
-</div>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">API Sample</router-link>
+    </div>
+    <router-view/>
+  </div>
 </template>
 
-<script>
-
-export default {
-  name: 'App'
+<style lang="scss">
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-</script>
-
-<style lang="sass">
-// Main.sass is imported into all Components using Webpack Data Parameter
-
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
 </style>

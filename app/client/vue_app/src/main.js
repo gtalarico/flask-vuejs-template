@@ -1,17 +1,14 @@
 import Vue from 'vue'
-import router from './router.js'
-import store from './store'
 import App from './App.vue'
+import router from './router'
+import store from './store'
 
-import './filters.js'
-import Mixins from './mixins.js'
-Vue.mixin(Mixins)
+import './filters'
 
-var vue = new Vue({
-  el: '#vue-app',
+Vue.config.productionTip = false
+
+new Vue({
   router,
   store,
-  template: '<App/>',
-  mixins: [Mixins],
-  components: { App }
-})
+  render: h => h(App)
+}).$mount('#app')

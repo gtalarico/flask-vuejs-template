@@ -15,7 +15,7 @@ def add_header(response):
     # Required for Webpack dev served page to make api requests to flask
     # This is for development only
     response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
     return response
 
 from app.api import views

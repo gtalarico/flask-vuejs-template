@@ -5,13 +5,13 @@ import Vue from 'vue'
 
 let filters = {
 
-  formatNumber (value) {
-    let val = (value / 1)
-    return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  formatTimestamp (timestamp) {
+    let datetime = new Date(timestamp)
+    return datetime.toLocaleTimeString('en-US')
   }
 }
 
-// Register All Filters
+// Register All Filters on import
 Object.keys(filters).forEach(function (filterName) {
   Vue.filter(filterName, filters[filterName])
 })
