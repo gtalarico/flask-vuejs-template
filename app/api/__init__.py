@@ -1,7 +1,7 @@
 """ API Blueprint Application """
 
 import os
-from flask import Flask, Blueprint, session
+from flask import Flask, Blueprint, session, current_app
 from flask_restplus import Api
 
 api_bp = Blueprint('api_bp', __name__,
@@ -12,10 +12,12 @@ api_rest = Api(api_bp)
 
 @api_bp.after_request
 def add_header(response):
-    # Required for Webpack dev served page to make api requests to flask
-    # This is for development only
-    response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type,Authorization'
+
+    # Required for Webpack dev application to make  requests to flask api
+    # from another host (localhost:8080)
+    if not current_app.config['PRODUCTION']:
+        response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
 from app.api.rest import resources
