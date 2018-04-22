@@ -47,7 +47,7 @@ The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; e
 ##### Before you start
 
 * Make sure node + npm are installed (tested with npm v5.6)
-* Python 3 is installed
+* Python 3 is installed (tested with 3.6)
 
 ##### Template and Dependencies
 
