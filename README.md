@@ -8,7 +8,7 @@ _An all batteries included template for a Flask + Vue.js Web Application_
 * Minimal Flask App with modular Config
 * [Flask-RestPlus](http://flask-restplus.readthedocs.io) API with class-based secure resource routing
 * Starter [PyTest](http://pytest.org) test suite
-* [vue-cli] 3 template (https://github.com/vuejs/vue-cli/blob/dev/docs/README.md) with Babel and ESlint.
+* [vue-cli 3](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md) with Babel and ESlint.
 * [Vuex](https://vuex.vuejs.org/) for state management
 * [Vue Router](https://router.vuejs.org/)
 * [Axios](https://vuex.vuejs.org/) for backend communication
