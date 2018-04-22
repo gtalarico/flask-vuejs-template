@@ -130,3 +130,8 @@ $ npm run build
 You can spin up your on version of this template on Heroku:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/gtalarico/flask-vuejs-template)
+
+#### Demo
+
+You can see this template deployed here:
+https://flask-vuejs-template.herokuapp.com/
