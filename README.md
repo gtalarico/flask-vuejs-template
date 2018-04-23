@@ -89,7 +89,7 @@ This template also includes a few functions to help us manage the 2 servers.
 From the root directory run:
 
 ```
-$ python app run api
+$ python -m app serve_api
 ```
 
 This will start the flask development server on `localhost:5000` and will respond to all requests on `/api.`.
@@ -100,13 +100,13 @@ This command is the same as running `python run.py`
 Start another terminal window, and from the directory run:
 
 ```
-$ python app run client
+$ python -m app serve_client
 ```
 
-This will launch your browser and server the Vue application on `localhost:8080`.
-The vue app will hit `localhost:5000` to fetch resources.
+This will launch your browser and serve the Vue application on `localhost:8080`.
+The vue app will use `localhost:5000` to fetch resources from the flask api.
 
-This command is a shorthand for changing directory to the `vue_app` directory and running `npm run serve`.
+This command is a shortcut for changing directory to `app/client/vue_app` and running `npm run serve`.
 
 
 ## Production Server

@@ -3,7 +3,7 @@ import click
 import subprocess
 from subprocess import Popen
 
-from app.config import Config
+from .config import Config
 CLIENT_DIR = Config.CLIENT_DIR
 
 
@@ -19,22 +19,17 @@ def _bash(cmd, **kwargs):
     return subprocess.call(cmd, env=os.environ, shell=True, **kwargs)
 
 
-@cli.group()
-def run():
-    """ Run Client & Api Servers """
-    pass
 
-
-@run.command(name='api', help='Run Flask Dev Server')
-def run_api():
+@cli.command(help='Run Flask Dev Server')
+def serve_api():
     """ Run Flask Development servers"""
     click.echo('Starting Flask dev server...')
     cmd = 'python run.py'
     _bash(cmd)
 
 
-@run.command(name='client', help='Run Vue Dev Server')
-def run_client():
+@cli.command(help='Run Vue Dev Server')
+def serve_client():
     """ Run Vue Development Server"""
     click.echo('Starting Vue dev server...')
     cmd = 'npm run serve'
