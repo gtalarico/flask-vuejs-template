@@ -32,20 +32,16 @@ The Flask application is setup with with two blueprints:
 
 #### Api Blueprint
 
-Uses FlaskRestful to serve restful resources at the `/api` url endpoint.
+Uses Flask-RestPlus to serve resources at the `/api` endpoint.
 Flask-RestPlus can be discarded if you prefer standard view functions routing.
 
 #### Client Blueprint
 
-Simple flask view is used to serve the entry point to the Vue application at the root endpoint `/`
+A simple Flask view is used to serve the entry point into the Vue application at the root endpoint `/`
+The template uses vue-cli 3 and assumes Vue.js & Webpack will manage front-end resources and assets,
+so it does overwrite template delimiter.
 
-This template assumes Vue.js and Webpack will manage front-end resources and assets so it does overwrite template delimiter.
-
-The Vue application uses the official Vue Webpack template.
-
-The main Vue instance is preconfigured with Filters, Mixins, Vue-Router, Vuex; each of these can easilly removed if they are not needed.
-
-
+The Vue instance is preconfigured with Filters, Vue-Router, Vuex; each of these can easilly removed if they are not desired.
 
 ## Installation
 
@@ -83,6 +79,8 @@ This combination allows you have both your backend python files and the Vue appp
 
 This template also includes a few functions to help us manage the 2 servers.
 
+This enables us to take advantage of Hot Module Replacement (HMR) and ESlint.
+I think it is a small price to pay for the amount of time saved by HMR alone.
 
 ##### Api Server
 
@@ -97,21 +95,21 @@ This command is the same as running `python run.py`
 
 ##### Client Server
 
-Start another terminal window, and from the directory run:
+Start another terminal window, and from the same directory run:
 
 ```
 $ python -m app serve_client
 ```
 
-This will launch your browser and serve the Vue application on `localhost:8080`.
-The vue app will use `localhost:5000` to fetch resources from the flask api.
+This will launch your browser and server the Vue application on `localhost:8080`. T
+he vue app will hit `localhost:5000` to fetch resources.
 
-This command is a shortcut for changing directory to `app/client/vue_app` and running `npm run serve`.
+This combination allows you have both your backend python files, as well as the Vue app files autoreload on each file save.
 
 
 ## Production Server
 
-The production server will use Gunicorn to serve the entire application.
+The production server uses Gunicorn to serve the entire application.
 This template is configured to work with Heroku out of the box - just make sure you run `npm run build` before pushing it to your Heroku repository.
 
 * Build your Vue Application:
