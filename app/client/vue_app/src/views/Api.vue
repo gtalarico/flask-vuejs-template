@@ -8,6 +8,7 @@
     <p v-for="r in resources" :key="r.timestamp">
       Server Timestamp: {{r.timestamp | formatTimestamp }}
     </p>
+    <p>{{error}}</p>
   </div>
 </template>
 
@@ -19,18 +20,25 @@ export default {
   name: 'about',
   data () {
     return {
-      resources: []
+      resources: [],
+      error: ''
     }
   },
   methods: {
     fetchResource () {
-      $backend.fetchResource().then(responseData => {
-        this.resources.push(responseData)
-      })
+      $backend.fetchResource()
+        .then(responseData => {
+          this.resources.push(responseData)
+        }).catch(error => {
+          this.error = error.message
+        })
     },
     fetchSecureResource () {
-      $backend.fetchSecureResource().then(responseData => {
+      $backend.fetchSecureResource()
+      .then(responseData => {
         this.resources.push(responseData)
+      }).catch(error => {
+        this.error = error.message
       })
     }
   }
