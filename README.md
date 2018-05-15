@@ -114,7 +114,7 @@ This template is configured to work with Heroku out of the box - just make sure 
 
 * Build your Vue Application:
 ```
-$ python app build
+$ python -m app build
 ```
 This commands is a shorcut for cd-ing into `/app/client/vue_app` and running `$ npm run build`.
 
