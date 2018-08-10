@@ -9,7 +9,9 @@ _Flask + Vue.js Web Application Template_
 
 [Live Demo](https://flask-vuejs-template.herokuapp.com/#/api)
 
-Like Django? Checkout the [Django VueJs Template](https://github.com/gtalarico/django-vue-template)
+## Django
+
+Prefer Django? Checkout the [Django VueJs Template](https://github.com/gtalarico/django-vue-template).
 
 ## Features
 * Minimal Flask App with modular Config
