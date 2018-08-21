@@ -7,12 +7,13 @@ from app import app
 class Config(object):
     DEBUG = False
     TESTING = False
-    BASE_DIR = os.path.dirname(__file__)
-    CLIENT_DIR = os.path.join(BASE_DIR, 'client', 'vue_app')
+    APP_DIR = os.path.dirname(__file__)
+    ROOT_DIR = os.path.dirname(APP_DIR)
+    DIST_DIR = os.path.join(ROOT_DIR, 'dist')
 
     if not os.path.exists(CLIENT_DIR):
         raise Exception(
-            'Client App directory not found: {}'.format(CLIENT_DIR))
+            'DIST_DIR not found: {}'.format(CLIENT_DIR))
 
 
 class Development(Config):

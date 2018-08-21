@@ -3,6 +3,7 @@ from functools import wraps
 from flask import request
 from flask_restplus import abort
 
+
 def require_auth(func):
     """ Secure method decorator """
     @wraps(func)

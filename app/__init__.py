@@ -1,14 +1,20 @@
 import os
-from flask import Flask
-import click
+from flask import Flask, current_app, send_file
 
+from .api import api_bp
+from .client import client_bp
 
-from app.api import api_rest, api_bp
-from app.client import client_bp
-
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../dist/static')
 app.register_blueprint(api_bp)
-app.register_blueprint(client_bp)
+# app.register_blueprint(client_bp)
 
 from . import config
 app.logger.info('>>> {}'.format(config.flask_config))
+
+@app.route('/')
+def index_client():
+    dist_dir = current_app.config['DIST_DIR']
+    entry = os.path.join(dist_dir, 'index.html')
+    return send_file(entry)
+
+
