@@ -8,6 +8,7 @@ click = "==6.7"
 gunicorn = "==19.7.1"
 Flask = "==0.12.2"
 flask-restplus = "*"
+python-dotenv = "*"
 
 [dev-packages]
 pytest = "*"

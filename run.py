@@ -1,2 +1,9 @@
+import os
 from app import app
-app.run(host='localhost', port=5000)
+
+app.run(port=5000)
+
+# To Run:
+# python run.py
+# or
+# python -m flask run
