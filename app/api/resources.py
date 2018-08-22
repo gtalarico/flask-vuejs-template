@@ -17,7 +17,7 @@ class SecureResource(Resource):
 
 
 @api_rest.route('/resource/<string:resource_id>')
-class ResourceOne(SecureResource):
+class ResourceOne(Resource):
     """ Unsecure Resource Class: Inherit from Resource """
 
     def get(self, resource_id):
@@ -30,7 +30,7 @@ class ResourceOne(SecureResource):
 
 
 @api_rest.route('/secure-resource/<string:resource_id>')
-class SecureResourceOne(Resource):
+class SecureResourceOne(SecureResource):
     """ Unsecure Resource Class: Inherit from Resource """
 
     def get(self, resource_id):
