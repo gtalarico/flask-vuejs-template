@@ -18,7 +18,14 @@ _Flask + Vue.js Web Application Template_
 * Sample Vue [Filters](https://vuejs.org/v2/guide/filters.html)
 * Heroku Configuration with one-click deployment + Gunicorn
 
+#### Old Template
+
+This template was updated on 2018-08-28 to use a flatter folder structure, as well as to use yarn instead of npm.
+You can now run `yarn serve` as well as other yarn commands from the template root directory.
+The old template will continue to live in the [npm-template branch](https://github.com/gtalarico/flask-vuejs-template/tree/npm-template)
+
 #### Alternatives
+
 If this setup is not what you are looking for, you might want look at other similar projects:
 
 * [oleg-agapov/flask-vue-spa](https://github.com/oleg-agapov/flask-vue-spa)
