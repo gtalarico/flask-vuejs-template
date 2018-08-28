@@ -1,5 +1,6 @@
 *.pyc
 .cache
+.mypy_cache\
 
 /dist
 .coverage
