@@ -1,4 +1,3 @@
 FLASK_ENV = "development"
-FLASK_SECRET = "123"
 FLASK_APP = "app"
 # FLASK_DEBUG=1

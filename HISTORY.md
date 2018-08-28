@@ -6,7 +6,7 @@
 * Flatten Templated Folder Structure
 * Removed Cli Commads
 
-### 0.2.0
+### 0.2.3
 * Updated to Vue Cli 3
 
 ### 0.1.0

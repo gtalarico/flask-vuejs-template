@@ -1,6 +1,7 @@
 *.pyc
 .cache
 .mypy_cache\
+.env
 
 /dist
 .coverage

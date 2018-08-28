@@ -10,7 +10,8 @@ from app import app
 
 class Config(object):
     FLASK_ENV =  os.environ['FLASK_ENV']
-    SECRET_KEY = os.environ['FLASK_SECRET']
+    # Set FLASK_SECRET on your production Environment
+    SECRET_KEY = os.getenv('FLASK_SECRET', 'Secret')
 
     APP_DIR = os.path.dirname(__file__)
     ROOT_DIR = os.path.dirname(APP_DIR)
