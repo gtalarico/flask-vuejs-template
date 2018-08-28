@@ -151,7 +151,15 @@ This will create the bundled `dist` folder which will be served by whitenoise.
 
 #### Python Build Process
 
+<<<<<<< HEAD
 The python buildpack will detect the `Pipfile` and install all the python dependencies.
+=======
+* Build your Vue Application:
+```
+$ python -m app build
+```
+This commands is a shorcut for cd-ing into `/app/client/vue_app` and running `$ npm run build`.
+>>>>>>> 32f8110eb43778e60c37f5f9a426bb5efe8a8013
 
 #### Release
 
