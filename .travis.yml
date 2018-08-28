@@ -1,0 +1,19 @@
+language: python
+git:
+  depth: 2
+python:
+  # - 3.5
+  - 3.6
+branches:
+  only:
+  - master
+  - dev/main
+script:
+  - pytest --cov=app/api --cov-report=xml
+install:
+  - "pip install --upgrade pip"
+  - "pip install pipenv"
+  - "pipenv install --dev"
+  - "pip install codecov"
+after_success:
+    - codecov

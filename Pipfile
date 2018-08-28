@@ -4,11 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+click = "==6.7"
+gunicorn = "==19.7.1"
 Flask = "==0.12.2"
-Flask-RESTful = "==0.3.6"
+flask-restplus = "*"
+python-dotenv = "*"
 
 [dev-packages]
-gunicorn = "==19.7.1"
+pytest = "*"
+bumpversion = "*"
+pytest-sugar = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.6"

@@ -1,6 +1,11 @@
 *.pyc
 .cache
 
+/dist
+.coverage
+.pytest_cache/
+htmlcov/
+
 .DS_Store
 node_modules/
 npm-debug.log*
