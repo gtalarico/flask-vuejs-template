@@ -18,23 +18,25 @@ _Flask + Vue.js Web Application Template_
 * Sample Vue [Filters](https://vuejs.org/v2/guide/filters.html)
 * Heroku Configuration with one-click deployment + Gunicorn
 
-#### Old Template
+## Demo
+[Live Demo](https://flask-vuejs-template.herokuapp.com/#/api)
 
-This template was updated on 2018-08-28 to use a flatter folder structure, as well as to use yarn instead of npm.
-You can now run `yarn serve` as well as other yarn commands from the template root directory.
-The old template will continue to live in the [npm-template branch](https://github.com/gtalarico/flask-vuejs-template/tree/npm-template)
-
-#### Alternatives
+## Alternatives
 
 If this setup is not what you are looking for, you might want look at other similar projects:
 
 * [oleg-agapov/flask-vue-spa](https://github.com/oleg-agapov/flask-vue-spa)
 * [testdrivenio/flask-vue-crud](https://github.com/testdrivenio/flask-vue-crud)
 
-Prefer Django? Checkout my [gtalarico/django-vue-template](https://github.com/gtalarico/django-vue-template)
+#### Old Template
 
-## Demo
-[Live Demo](https://flask-vuejs-template.herokuapp.com/#/api)
+This template was updated on 2018-08-28 to use a flatter folder structure, as well as to use yarn instead of npm.
+You can now run `yarn serve` as well as other yarn commands from the template root directory.
+The old template will continue to live in the [npm-template branch](https://github.com/gtalarico/flask-vuejs-template/tree/npm-template)
+
+#### Django
+
+Prefer Django? Checkout my [gtalarico/django-vue-template](https://github.com/gtalarico/django-vue-template)
 
 ## Template Structure
 
