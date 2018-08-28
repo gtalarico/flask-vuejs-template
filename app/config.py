@@ -9,7 +9,8 @@ from app import app
 
 
 class Config(object):
-    FLASK_ENV =  os.environ['FLASK_ENV']
+    # If not set fall back to production for safety
+    FLASK_ENV =  os.getenv('FLASK_ENV', 'production')
     # Set FLASK_SECRET on your production Environment
     SECRET_KEY = os.getenv('FLASK_SECRET', 'Secret')
 
