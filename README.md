@@ -155,10 +155,6 @@ This will create the bundled `dist` folder which will be served by whitenoise.
 
 The python buildpack will detect the `Pipfile` and install all the python dependencies.
 
-#### Release
-
-The `Procfile` will run Django migrations and then launch Django's app using gunicorn, as recommended by heroku.
-
 #### Production Sever Setup
 
 Here are the commands we need to run to get things setup on the Heroku side:
