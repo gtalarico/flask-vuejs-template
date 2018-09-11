@@ -23,20 +23,20 @@ _Flask + Vue.js Web Application Template_
 
 ## Alternatives
 
-If this setup is not what you are looking for, you might want look at other similar projects:
+If this setup is not what you are looking for, here are some similar projects:
 
 * [oleg-agapov/flask-vue-spa](https://github.com/oleg-agapov/flask-vue-spa)
 * [testdrivenio/flask-vue-crud](https://github.com/testdrivenio/flask-vue-crud)
 
 #### Old Template
 
-This template was updated on 2018-08-28 to use a flatter folder structure, as well as to use yarn instead of npm.
+This template was updated to use a flatter folder structure and use yarn instead of npm.
 You can now run `yarn serve` as well as other yarn commands from the template root directory.
-The old template will continue to live in the [npm-template branch](https://github.com/gtalarico/flask-vuejs-template/tree/npm-template)
+The old template will be kept in the [npm-template branch](https://github.com/gtalarico/flask-vuejs-template/tree/npm-template) but will not be maintained. 
 
 #### Django
 
-Prefer Django? Checkout my [gtalarico/django-vue-template](https://github.com/gtalarico/django-vue-template)
+Prefer Django? Checkout the [gtalarico/django-vue-template](https://github.com/gtalarico/django-vue-template)
 
 ## Template Structure
 
