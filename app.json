@@ -6,9 +6,9 @@
   "logo": "https://raw.githubusercontent.com/gtalarico/flask-vuejs-template/master/app/client/app/src/assets/img/logo.png",
   "keywords": ["flask", "vue"],
   "env": {
-    "FLASK_CONFIG": {
-      "description": "Flask Enviroment Config",
-      "value": "Production"
+    "FLASK_ENV": {
+      "description": "Flask Enviroment",
+      "value": "production"
     },
     "SECRET": {
       "description": "Flask Secret Key",

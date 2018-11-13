@@ -1,3 +1,6 @@
+### 0.3.0.post1
+* Updated Dependencies and Docs (#17)
+
 ### 0.3.0
 * Npm > Yarn
 * Updated to Flask 1.0

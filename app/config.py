@@ -1,7 +1,7 @@
 """
 Global Flask Application Setting
 
-set FLASK_CONFIG to 'development
+See `.flaskenv` for default settings self.
  """
 
 import os
