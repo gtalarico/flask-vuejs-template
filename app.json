@@ -3,7 +3,7 @@
   "name": "Flask VueJs Template",
   "description": "",
   "repository": "https://github.com/gtalarico/flask-vuejs-template",
-  "logo": "https://github.com/crcastle/flask-vuejs-template/raw/master/docs/project-logo.png",
+  "logo": "https://github.com/gtalarico/flask-vuejs-template/raw/master/docs/project-logo.png",
   "keywords": ["flask", "vue"],
   "env": {
     "FLASK_ENV": {
