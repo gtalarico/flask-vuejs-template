@@ -14,7 +14,7 @@ _Flask + Vue.js Web Application Template_
 * [vue-cli 3](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md) + yarn
 * [Vuex](https://vuex.vuejs.org/)
 * [Vue Router](https://router.vuejs.org/)
-* [Axios](https://vuex.vuejs.org/) for backend communication
+* [Axios](https://github.com/axios/axios/) for backend communication
 * Sample Vue [Filters](https://vuejs.org/v2/guide/filters.html)
 * Heroku Configuration with one-click deployment + Gunicorn
 
