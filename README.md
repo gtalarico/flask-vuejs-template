@@ -93,17 +93,18 @@ Before getting started, you should have the following installed and running:
 	$ git clone https://github.com/gtalarico/flask-vuejs-template.git
 	```
 
-* Setup virtual environment, install dependencies, and activate it:
+* Setup virtual environment outside app directory, install dependencies, and activate it:
 
 	```
-	$ pipenv install --dev
-	$ pipenv shell
+	$ python3 -m venv env
+	$ . env/bin/activate
 	```
 
 * Install JS dependencies
 
 	```
 	$ yarn install
+	$ pip install flask-restplus
 	```
 
 
