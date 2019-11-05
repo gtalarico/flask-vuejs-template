@@ -15,6 +15,9 @@ yarn-debug.log*
 yarn-error.log*
 selenium-debug.log
 
+# Google Keys
+travelvive*.json
+
 # Editor directories and files
 .idea
 .vscode
