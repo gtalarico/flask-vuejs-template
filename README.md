@@ -21,23 +21,6 @@ _Flask + Vue.js Web Application Template_
 ## Demo
 [Live Demo](https://flask-vuejs-template.herokuapp.com/#/api)
 
-## Alternatives
-
-If this setup is not what you are looking for, here are some similar projects:
-
-* [oleg-agapov/flask-vue-spa](https://github.com/oleg-agapov/flask-vue-spa)
-* [testdrivenio/flask-vue-crud](https://github.com/testdrivenio/flask-vue-crud)
-
-#### Old Template
-
-This template was updated to use a flatter folder structure and use yarn instead of npm.
-You can now run `yarn serve` as well as other yarn commands from the template root directory.
-The old template will be kept in the [npm-template branch](https://github.com/gtalarico/flask-vuejs-template/tree/npm-template) but will not be maintained. 
-
-#### Django
-
-Prefer Django? Checkout the [gtalarico/django-vue-template](https://github.com/gtalarico/django-vue-template)
-
 ## Template Structure
 
 The template uses Flask & Flask-RestPlus to create a minimal REST style API,
@@ -93,17 +76,18 @@ Before getting started, you should have the following installed and running:
 	$ git clone https://github.com/gtalarico/flask-vuejs-template.git
 	```
 
-* Setup virtual environment, install dependencies, and activate it:
+* Setup virtual environment outside app directory, install dependencies, and activate it:
 
 	```
-	$ pipenv install --dev
-	$ pipenv shell
+	$ python3 -m venv env
+	$ . env/bin/activate
 	```
 
 * Install JS dependencies
 
 	```
 	$ yarn install
+	$ pip install flask-restplus
 	```
 
 
