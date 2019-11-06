@@ -73,7 +73,7 @@ Before getting started, you should have the following installed and running:
 * Clone this repository:
 
 	```
-	$ git clone https://github.com/gtalarico/flask-vuejs-template.git
+	$ git clone https://github.com/downlz/tripive
 	```
 
 * Setup virtual environment outside app directory, install dependencies, and activate it:
