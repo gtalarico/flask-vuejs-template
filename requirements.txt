@@ -1,5 +1,11 @@
-Flask-Uploads
-flask-restplus
 google
 google-cloud
-google-cloud-vision
+google-api-core==^1.14.3
+google-auth==^1.7.0
+google-cloud-vision==^0.39.0
+google-search-results==^1.6.0
+googleapis-common-protos==^1.6.0
+Flask==^1.1.1
+Flask-Cors==^3.0.8
+Flask-Uploads==^0.2.1
+flask-restplus
