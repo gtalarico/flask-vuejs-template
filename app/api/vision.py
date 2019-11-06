@@ -6,6 +6,16 @@ from google.cloud.vision import types
 from flask import Flask, render_template, request
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 from google.oauth2 import service_account
+# from flask import request
+from flask_restplus import Resource
+
+from .security import require_auth
+from . import api_rest
+
+
+class SecureResource(Resource):
+    """ Calls require_auth decorator on all requests """
+    method_decorators = [require_auth]
 
 # Change this to your local directory
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="../travelvive-2a4639cbd834.json"
@@ -14,8 +24,8 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="../travelvive-2a4639cbd834.json"
 
 photos = UploadSet('photos', IMAGES)
 
-app.config['UPLOADED_PHOTOS_DEST'] = 'static/img'
-configure_uploads(app, photos)
+# app.config['UPLOADED_PHOTOS_DEST'] = 'static/img'
+# configure_uploads(app, photos)
 # def model(filename):
 #     #google.io stuff
 #     return answer
@@ -39,12 +49,13 @@ def detect_labels(path):
 
     #for label in labels:
     #    print(label.description)
-@app.route('/upload', methods=['GET', 'POST'])
+@api_rest..route('/upload/<string:resource_id>', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST' and 'photo' in request.files:
 
         filename = photos.save(request.files['photo'])
-        full_path = os.path.join(app.config['UPLOADED_PHOTOS_DEST'], filename)
+        # full_path = os.path.join(app.config['UPLOADED_PHOTOS_DEST'], filename)
+        full_path = os.path.join('/static/img', filename)
 
         labels = detect_labels(full_path)
         #print(labels)
@@ -56,7 +67,17 @@ def upload():
         prediction_text = ", ".join(predictions)  #make it a little more pretty with ','
     else:
         prediction_text = "nothing to predict.."
-    
-    return prediction_text
+
+    # return {'timestamp': timestamp}
+    return {'prediction' : prediction_text}
     # return render_template('upload.html', prediction_text=prediction_text)
+
+# Sample Test Call
+@api_rest.route('/test/<string:resource_id>')
+class SecureResourceTwo(Resource):
+    """ Unsecure Resource Class: Inherit from Resource """
+
+    def get(self,resource_id):
+        # timestamp = datetime.utcnow().isoformat()
+        return {'timestamp': 'Hello World'}       
 

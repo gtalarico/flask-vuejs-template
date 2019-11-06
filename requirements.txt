@@ -1,0 +1,5 @@
+Flask-Uploads
+flask-restplus
+google
+google-cloud
+google-cloud-vision

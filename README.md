@@ -87,7 +87,7 @@ Before getting started, you should have the following installed and running:
 
 	```
 	$ yarn install
-	$ pip install flask-restplus
+	$ pip install -r requirements.txt
 	```
 
 

@@ -15,3 +15,4 @@ def add_header(response):
 
 # Import resources to ensure view is registered
 from .resources import * # NOQA
+from .vision import *

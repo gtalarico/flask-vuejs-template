@@ -36,3 +36,12 @@ class SecureResourceOne(SecureResource):
     def get(self, resource_id):
         timestamp = datetime.utcnow().isoformat()
         return {'timestamp': timestamp}
+
+
+@api_rest.route('/demo/<string:resource_id>')
+class SecureResourceTwo(Resource):
+    """ Unsecure Resource Class: Inherit from Resource """
+
+    def get(self,resource_id):
+        # timestamp = datetime.utcnow().isoformat()
+        return {'timestamp': 'Hello World'}        
