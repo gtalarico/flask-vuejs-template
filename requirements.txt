@@ -9,3 +9,4 @@ Flask==^1.1.1
 Flask-Cors==^3.0.8
 Flask-Uploads==^0.2.1
 flask-restplus
+firebase-admin
