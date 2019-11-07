@@ -17,6 +17,7 @@ selenium-debug.log
 
 # Google Keys
 travelvive*.json
+/keys/*.json
 
 # Editor directories and files
 .idea
