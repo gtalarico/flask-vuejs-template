@@ -11,3 +11,4 @@ Flask-Uploads==^0.2.1
 flask-restplus
 firebase-admin
 python-dotenv==^0.10.2
+image==^1.5.27
