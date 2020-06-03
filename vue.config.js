@@ -13,7 +13,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api*': {
-        // Forward frontend dev server request for /api to django dev server
+        // Forward frontend dev server request for /api to flask dev server
         target: 'http://localhost:5000/'
       }
     }
